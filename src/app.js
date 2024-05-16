@@ -1,10 +1,10 @@
 
-require('dotenv').config()
-require("./src/db").connect()
-//import express from 'express';
+//require('dotenv').config()
+//require("./src/db").connect()
+import express from 'express';
 import morgan from 'morgan';
 
-const express = require('express')
+//const express = require('express')
 const app = express();
 
 

@@ -1,6 +1,6 @@
-//import mongoose from 'mongoose'
+import mongoose from 'mongoose'
 
-const mongoose = require("mongoose")
+//const mongoose = require("mongoose")
 
 const { MONGODB_URL } = process.env
 
@@ -9,14 +9,11 @@ const { MONGODB_URL } = process.env
 // la eporto porque voy a utilizarlaen otras partes. Pero este código puede funcionar o no, entonces necesito el try and catch
 
 
-exports.connect = () => {
+export const connectDB = () => {
     
-    mongoose.connect(MONGODB_URL, {
-            useNewUrlParser: true,
-            useUnifiedTopology: true
-        })
+    mongoose.connect(MONGODB_URL, {})
         .then(
-            console.log('DB connected succesfully')
+            console.log('>>>DB connected succesfully')
         )
         .catch ((error) => {
             console.log('DB connection FAILED');
