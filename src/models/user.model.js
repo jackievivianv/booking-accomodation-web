@@ -1,6 +1,7 @@
 import mongoose from "mongoose";
 
 
+//esto es paea decirle lo que va a guardar
 
 const userSchema = mongoose.Schema({
     username: {
@@ -21,4 +22,5 @@ const userSchema = mongoose.Schema({
     }
 })
 
+//esto es para interectuar con la base de datos
 export default mongoose.model('User', userSchema)
