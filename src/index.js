@@ -1,9 +1,11 @@
-import app from './app.js'
-import { connectDB } from './db.js'
+import dotenv from 'dotenv';
+import app from './app.js';
 
+dotenv.config();
 
+const port = process.env.PORT || 3000;
 
-connectDB();
-// quiero que escuche y se ejecture desde el puerto 3000
-app.listen(3000)
-console.log('Server on port', 3000)
+app.listen(port, () => {
+    console.log(`Server running on port ${port}`);
+});
+

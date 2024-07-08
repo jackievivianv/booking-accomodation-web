@@ -1,8 +1,10 @@
 import mongoose from 'mongoose'
+import dotenv from 'dotenv';
 
-//const mongoose = require("mongoose")
 
-const { MONGODB_URL } = process.env
+dotenv.config(); // Cargar variables de entorno
+
+const { MONGODB_URL } = process.env;
 
 // conecta mongoose con la direccion de la base de datos, el nombre es merndb (mongo crea una base de datos apenas creo un dato)
 // esto es asincrono, entonces por eso la conexión con mongoose va dentro de una función
